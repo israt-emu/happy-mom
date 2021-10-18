@@ -1,0 +1,9 @@
+.footer {
+  background: #875ca8;
+}
+.icon {
+  color: #dbbcf3;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
