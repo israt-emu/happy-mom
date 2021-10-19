@@ -15,15 +15,14 @@ const Register = () => {
     pass,
     updateInfo,
   } = useAuth();
+
   ///registration with email pass
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (pass.length < 6) {
-      setError("Password should be at least 6 characters long");
-      return;
-    }
-    signUpWithEmailPass();
+    signUpWithEmailPass(email, pass);
     updateInfo();
+    console.log(user.displayName);
   };
   //setting name
   const handleName = (e) => {
@@ -56,6 +55,8 @@ const Register = () => {
               type="email"
               className="block w-full py-2 px-3 rounded bg-purple-100 mb-4"
               placeholder="Your Email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please Input a valid Email"
               onBlur={handleEmail}
               required
             />
@@ -63,6 +64,8 @@ const Register = () => {
               type="password"
               className="block w-full py-2 px-3 rounded bg-purple-100 mb-4"
               placeholder="Password"
+              pattern=".{8,}"
+              title="Eight or more characters"
               onBlur={handlePass}
               required
             />

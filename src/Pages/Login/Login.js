@@ -16,7 +16,6 @@ const Login = () => {
   } = useAuth();
   //find location from useLocation hook
   const location = useLocation();
-  console.log(location);
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
   //sign in using email pass

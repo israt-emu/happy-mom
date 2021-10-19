@@ -27,10 +27,10 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
   ///register using email pass
-  const signUpWithEmailPass = () => {
+  const signUpWithEmailPass = (email, pass) => {
     createUserWithEmailAndPassword(auth, email, pass)
       .then((result) => {
-        setUser(result.user);
+        result.user && setUser(result.user);
         setError("");
       })
       .catch((error) => {
@@ -47,8 +47,8 @@ const useFirebase = () => {
       displayName: name,
     })
       .then(() => {
-        setName(name);
-        setError("");
+        //updated
+        //
       })
       .catch((error) => {
         setError(error.message);

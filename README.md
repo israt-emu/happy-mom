@@ -7,7 +7,7 @@ This is my project link(https://happy-mom-1027a.web.app/).
 Welcome To The Happy Mom Community! We extend our helping hand to people who cannot conceive naturally, Men With Fertility Issues, Couples with Recurrent Pregnancy losses, Couples Carrying Genetically Inherited Disorder,Women who want to freeze their eggs,
 Cancer Patients who want to preserve their eggs.
 
-## Five points about this project
+## Some points about this project
 
 - This Happy Mom center is very careful and concern of your pregnancy.
 - It helps you to be really a happy mom!

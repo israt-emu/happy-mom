@@ -10,6 +10,7 @@ const Header = () => {
   const collapseMenu = () => {
     setMenu(!menu);
   };
+
   return (
     <div>
       <nav className="bg-white shadow max-w-7xl mx-auto mt-6 sticky top-0 z-10 rounded">
@@ -116,9 +117,7 @@ const Header = () => {
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {/* conditional rendering for login and logout  */}
               {user.email && (
-                <h1 className="text-sm font-bold mr-2">
-                  {name ? name : user.displayName}
-                </h1>
+                <h1 className="text-sm font-bold mr-2">{user.displayName}</h1>
               )}
 
               {user.email ? (
