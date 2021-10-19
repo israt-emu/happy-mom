@@ -116,17 +116,20 @@ const Header = () => {
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {/* conditional rendering for login and logout  */}
-              {user.email && (
-                <h1 className="text-sm font-bold mr-2">{user.displayName}</h1>
-              )}
 
               {user.email ? (
-                <button
-                  className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  text-white rounded button"
-                  onClick={logOut}
-                >
-                  Log Out
-                </button>
+                <div>
+                  <button
+                    className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  text-white rounded button"
+                    onClick={logOut}
+                  >
+                    Log Out
+                  </button>
+                  <h1 className="text-md font-bold mr-2">
+                    {/* showing user name ,but if displayname is null then showing email  */}
+                    {user.displayName ? user.displayName : user.email}
+                  </h1>
+                </div>
               ) : (
                 <Link to="/login">
                   <button className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  rounded mr-3 button-2">
