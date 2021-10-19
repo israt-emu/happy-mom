@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import logo from "../../../images/logo.jpg";
 
 const Header = () => {
+  const { user, logOut, name } = useAuth();
   const [menu, setMenu] = useState(false);
   const collapseMenu = () => {
     setMenu(!menu);
@@ -76,7 +78,7 @@ const Header = () => {
                   alt="Workflow"
                 />
                 <span
-                  className="font-bold sm:text-xl text-md mr-20 md:mr-0"
+                  className="font-bold sm:text-xl text-md mr-28 md:mr-0"
                   style={{ lineHeight: "0.8" }}
                 >
                   Happy
@@ -102,23 +104,36 @@ const Header = () => {
                   </NavLink>
 
                   <NavLink
-                    to="/testimonials"
+                    to="/blog"
                     className="text-black px-3 py-8 text-md font-medium"
                   >
-                    Testimonials
+                    Blog
                   </NavLink>
                 </div>
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <Link to="/login">
-                <button className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  rounded mr-3 button-2">
-                  Login
+              {/* conditional rendering for login and logout  */}
+              {user.email && (
+                <h1 className="text-sm font-bold mr-2">
+                  {name ? name : user.displayName}
+                </h1>
+              )}
+
+              {user.email ? (
+                <button
+                  className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  text-white rounded button"
+                  onClick={logOut}
+                >
+                  Log Out
                 </button>
-              </Link>
-              <button className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  text-white rounded button">
-                Log Out
-              </button>
+              ) : (
+                <Link to="/login">
+                  <button className="bg-black md:px-3 md:py-2 py-1 px-2 text-sm md:text-md  rounded mr-3 button-2">
+                    Login
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -143,10 +158,10 @@ const Header = () => {
               Doctors
             </NavLink>
             <NavLink
-              to="/testimonials"
+              to="/blog"
               className="text-black block px-3 py-2 text-base font-medium"
             >
-              Testimonials
+              Blog
             </NavLink>
           </div>
         </div>

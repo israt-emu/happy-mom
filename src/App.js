@@ -8,6 +8,9 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import ServiceDetails from "./Pages/Home/ServiceDetails/ServiceDetails";
 import Doctors from "./Pages/Doctors/Doctors/Doctors";
 import AuthProvider from "./Contexts/AuthProvider";
+import Register from "./Pages/Register/Register";
+import Blog from "./Pages/Blog/Blog";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -21,15 +24,21 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/doctors">
+          <PrivateRoute path="/doctors">
             <Doctors></Doctors>
-          </Route>
-          <Route path="/details/:serviceId">
+          </PrivateRoute>
+          <PrivateRoute path="/details/:serviceId">
             <ServiceDetails></ServiceDetails>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <PrivateRoute path="/blog">
+            <Blog></Blog>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
