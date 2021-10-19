@@ -14,6 +14,7 @@ const Login = () => {
     setName,
     setIsLoading,
   } = useAuth();
+  //find location from useLocation hook
   const location = useLocation();
   console.log(location);
   const history = useHistory();

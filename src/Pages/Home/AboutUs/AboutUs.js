@@ -2,6 +2,7 @@ import React from "react";
 import img from "../../../images/mom-child.jpg";
 
 const AboutUs = () => {
+  ///about us section
   return (
     <div className="py-10">
       <div className="lg:w-4/5 w-11/12 mx-auto">

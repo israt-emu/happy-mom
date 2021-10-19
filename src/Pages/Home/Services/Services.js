@@ -4,7 +4,7 @@ import Service from "../Service/Service";
 
 const Services = () => {
   const [services] = useServices();
-  console.log(services);
+
   return (
     <div>
       <div className="services py-20" style={{ background: "#faf6f2" }}>

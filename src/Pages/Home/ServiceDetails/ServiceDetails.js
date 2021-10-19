@@ -6,7 +6,7 @@ const ServiceDetails = () => {
   const { serviceId } = useParams();
   const [services] = useServices();
   //find single service by id params
-  console.log(serviceId);
+
   const findService = services?.find(
     (service) => service.id.toString() === serviceId
   );

@@ -19,17 +19,24 @@ const Testimonial = () => {
               <img
                 src={img1}
                 alt=""
-                className="rounded-full md:w-3/5 w-11/12 md:-mt-14 -mt-0 shadow-lg"
+                className="rounded-full md:w-4/5 w-11/12 md:-mt-14 -mt-0 shadow-lg"
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-purple-400 mt-3 md:mt-0">
+              <h1 className="text-xl font-bold text-purple-400 mt-3 md:mt-0 mb-2">
                 Maria Len
               </h1>
+              {/* quote about us  */}
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Ducimus magnam modi inventore quia adipisci debitis numquam
-                necessitatibus iusto asperiores alias?
+                <i className="fas fa-quote-left mr-2"></i>
+                <i>
+                  I have been extremely impressed with your knowledge and
+                  insight on our needs here! I would highly recommended your
+                  organization and have been blessed to have made many
+                  friendships with the highly qualified staff you have provided
+                  us.
+                </i>
+                <i className="fas fa-quote-right ml-2"></i>
               </p>
             </div>
           </div>
@@ -42,13 +49,19 @@ const Testimonial = () => {
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-purple-400 md:mt-0 mt-3">
+              <h1 className="text-xl font-bold text-purple-400 md:mt-0 mt-3 mb-2">
                 Claira Benny
               </h1>
+              {/* quote about us  */}
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Ducimus magnam modi inventore quia adipisci debitis numquam
-                necessitatibus iusto asperiores alias?
+                <i className="fas fa-quote-left mr-2"></i>
+                <i>
+                  I'm totally happy with the care given by Happy Mom for my
+                  sister who had her delivery there.They took care of her and
+                  baby seriously.No disappointments from the time of admission
+                  to charge.So thankful.
+                </i>
+                <i className="fas fa-quote-right ml-2"></i>
               </p>
             </div>
           </div>

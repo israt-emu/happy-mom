@@ -24,6 +24,7 @@ const Doctors = () => {
         <h1 className="text-3xl text-center mt-5 mb-8">Meet Our Specialist</h1>
         <div className="md:w-4/5 w-11/12 mx-auto bg-white p-8 shadow">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* passing props to single doctor components */}
             <div>
               <Doctor
                 img={img1}

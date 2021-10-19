@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
@@ -16,6 +15,7 @@ const Register = () => {
     pass,
     updateInfo,
   } = useAuth();
+  ///registration with email pass
   const handleSubmit = (e) => {
     e.preventDefault();
     if (pass.length < 6) {

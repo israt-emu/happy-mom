@@ -5,6 +5,7 @@ import logo from "../../../images/logo.jpg";
 
 const Header = () => {
   const { user, logOut, name } = useAuth();
+  //state for collapsing menu
   const [menu, setMenu] = useState(false);
   const collapseMenu = () => {
     setMenu(!menu);
@@ -87,7 +88,7 @@ const Header = () => {
               </div>
               <div className="hidden sm:block  sm:ml-6">
                 <div className="flex space-x-4">
-                  {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
+                  {/* header link  */}
                   <NavLink
                     to="/home"
                     className="text-black px-3 py-8 text-md font-medium"
